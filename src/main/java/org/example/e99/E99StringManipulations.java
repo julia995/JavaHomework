@@ -12,17 +12,19 @@ public class E99StringManipulations {
 
         // Read the input string
         String input = scan.nextLine();
+        checkPalindrome(input);
+        scan.close();
 
+    }
 
-        // Remove all spaces and convert the string to lowercase
-        String newStr = input.replaceAll("\\s+", "");
-        String newStr1 = newStr.toLowerCase();
-        String reverse = newStr1
+    public static void checkPalindrome (String originalStr){
 
-        if()
-
-        System.out.println(newStr1);
-
-
+        StringBuilder sb = new StringBuilder(originalStr);
+        String reversedStr = sb.reverse().toString();
+        if(originalStr.equals(reversedStr)){
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
     }
 }
